@@ -1,0 +1,235 @@
+Fact.py
+
+n = int(input("Enter a number: "))
+
+fact = 1
+
+for i in range(1, n + 1):
+    fact = fact * i
+    
+print(n,"!은", fact, "이다.")
+-----------------
+
+N prime.py
+
+N_PRIMES = 50
+number = 2
+count = 0
+while count < N_PRIMES :
+  divisor = 2
+  prime = True
+  while divisor < number :
+     if number % divisor == 0:
+           prime = False
+           break;
+     divisor += 1
+  if prime: 
+     count += 1
+     print(number, end=" ")
+  number += 1
+-----------------
+
+bisection.py
+
+import random
+
+
+x = sorted(random.sample(range(1, 100), 10))
+print("리스트:", x)
+
+
+t = random.choice(x)
+print("찾을 값:", t)
+
+l = 0
+r = len(x) - 1
+
+for i in range(len(x)):
+    m = (l + r) // 2
+    print("중간값 인덱스:", m, "값:", x[m])
+
+    if x[m] == t:
+        print("찾았다:", m)
+        break
+
+    if x[m] < t:
+        l = m + 1
+    else:
+        r = m - 1
+-----------------
+
+
+dan.py
+
+dan= int(input("원하는단은: "))
+i= 1
+while i <= 9:
+    print("%s*%s=%s" % (dan, i, dan * i))
+    i = i + 1
+----------------
+
+dice.py
+
+for a in range(1, 7) :
+ for b in range(1, 7) :
+  if a + b == 6 :
+   print(f"첫 번째 주사위={a} 두 번째 주사위={b}" )
+-----------------
+
+
+fact2.py
+
+num = int(input("Enter a number: "))
+
+fact = 1
+
+print(f"{num}! = ", end="")
+for i in range(1, num + 1):
+    fact *= i
+    print(i, end=" * ")
+
+print(f"= {fact}")
+
+--------------
+function.py
+
+COUNT = 100
+START = 1.0
+END = 2.0
+
+for i in range(COUNT):
+    x = START + (END - START) * i / COUNT
+    f =(x**2-x-1)
+    if abs(f-0.0000) < 0.01:
+        print("방정식의 해는 ", x)
+-----------------
+
+function2.py
+
+COUNT = 100
+START = 1.0
+END = 2.0
+
+for i in range(COUNT):
+    x = START + (END - START) * i / COUNT
+    f =(x**2-x-1)
+    if abs(f-0.0000) < 0.0001:
+        print("방정식의 해는 ", x)
+
+-----------------
+
+function3.py
+
+COUNT = 100000
+START = 1.0
+END = 2.0
+
+for i in range(COUNT):
+    x = START + (END - START) * i / COUNT
+    f =(x**2-x-1)
+    if abs(f-0.0000) < 0.0001:
+        print("방정식의 해는 ", x)
+
+----------------
+
+gamble.py
+
+import random
+initial_money = 50
+goal = 250
+wins = 0
+for i in range(100) : 
+ cash = initial_money
+ while cash > 0 and cash < goal : 
+  number = random.randint(1, 2)
+  if number == 1: 
+    cash = cash + 1 
+  else:
+    cash = cash -1 
+ if cash == goal : wins = wins + 1
+print("초기금액$%d"% initial_money)
+print("목표금액$%d"% goal)
+print("100번중에서%d번성공"% wins)
+
+----------------
+
+math problem.py
+
+import random
+
+flag = True
+
+while flag:
+ x = random.randint(1, 100)
+ y = random.randint(1, 100)
+ answer = int(input(f"{x} + {y} = "))
+ if answer == x + y:
+  print("잘했어요!!")
+ else:
+  print("틀렸어요. 하지만다음번에는잘할수있죠?")
+  flag = False
+  break
+
+----------------
+
+number.py
+
+import random
+
+tries = 0 
+guess = 0
+answer = random.randint(1, 100) 
+
+print("1부터100 사이의숫자를맞추시오")
+
+while guess != answer:
+        guess = int(input("숫자를입력하시오: "))
+        tries = tries + 1
+        if guess < answer:
+            print("너무낮음!")
+        elif guess > answer:
+            print("너무높음!")
+    
+if guess == answer:
+            print("축하합니다. 시도횟수=", tries)
+else:
+            print("정답은", answer)
+
+----------------
+
+password.py
+
+password = ""
+while password != "pythonisfun":
+   password = input("암호를입력하시오: ")
+print("로그인성공")
+
+----------------
+
+restaurant.py
+
+
+persons = [ "Kim", "Park", "Lee"] 
+restaurants = [ "Korean", "American", "French"]
+for person in persons:
+ for restaurant in restaurants:
+  print(person + "이"+ restaurant+"식당을방문")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
